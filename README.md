@@ -11,7 +11,7 @@ Reports solo vs contended performance, GiB/s vs GB/s, theoretical vs sustained, 
 
 ```bash
 # Clone and build
-git clone https://github.com/<your-username>/jetson-mem-bench.git
+git clone https://github.com/jetsonhacks/jetson-mem-bench.git
 cd jetson-mem-bench
 make -j
 
@@ -24,11 +24,11 @@ python3 tools/bench.py --op copy
 
 ## Platforms
 
-- ##Jetson AGX Thor## (SM=110, theoretical 273 GB/s)
+- **Jetson AGX Thor** (SM=110, theoretical 273 GB/s)
 
-- ##Jetson AGX Orin## (SM=87, theoretical 204.8 GB/s)
+- **Jetson AGX Orin** (SM=87, theoretical 204.8 GB/s)
 
-- ##Jetson Orin Nano## (SM=87, theoretical 68 GB/s)
+- **Jetson Orin Nano** (SM=87, theoretical 68 GB/s)
 
 Also runs on x86 + CUDA-capable GPUs
 
