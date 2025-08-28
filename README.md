@@ -14,7 +14,21 @@ Reports solo vs contended performance, GiB/s vs GB/s, theoretical vs sustained, 
 git clone https://github.com/jetsonhacks/jetson-mem-bench.git
 cd jetson-mem-bench
 make -j
+```
 
+On Jetson before running tests:
+
+```bash
+sudo nvpmodel -m 0     # performance mode
+# Turn off Dynamic Voltage and Frequency Scaling; Clocks full speed
+# to restore and turn DVFS back on : sudo jetson_clocks --restore
+sudo jetson_clocks     
+export OMP_NUM_THREADS=$(nproc)
+export OMP_PROC_BIND=close
+export OMP_PLACES=cores
+```
+Run tests:
+```bash
 # Run default Triad benchmark
 python3 tools/bench.py
 
