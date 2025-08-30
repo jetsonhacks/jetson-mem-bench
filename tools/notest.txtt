@@ -1,0 +1,3 @@
+For Jetson Orin Super:
+
+python tools/bench.py --cpu-ws-gib 0.6 --gpu-ws-gib 1.8 --iters 60
